@@ -1,0 +1,17 @@
+@use "variables" as v;
+
+$section-padding: 60px 20px;
+
+%section {
+  padding: $section-padding;
+}
+
+.light-section {
+  @extend %section;
+  background-color: v.$color-light-main;
+}
+
+.dark-section {
+  @extend %section;
+  background-color: v.$color-dark-main;
+}

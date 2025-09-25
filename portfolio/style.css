@@ -176,4 +176,17 @@ summary {
   display: list-item;
 }
 
+/* Color palette */
+.dark-section, .light-section {
+  padding: 60px 20px;
+}
+
+.light-section {
+  background-color: #ffffff;
+}
+
+.dark-section {
+  background-color: #222222;
+}
+
 /*# sourceMappingURL=style.css.map */
