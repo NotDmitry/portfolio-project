@@ -287,4 +287,18 @@ html {
   border-color: #FF3C3C;
 }
 
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.nav-list a {
+  padding: 0 20px;
+}
+.nav-list a:hover {
+  color: #FF3C3C;
+}
+
 /*# sourceMappingURL=style.css.map */

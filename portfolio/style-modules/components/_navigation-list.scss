@@ -1,0 +1,17 @@
+@use "../common/variables" as v;
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+
+  a {
+    padding: 0 20px;
+
+    &:hover {
+      color: v.$color-hover;
+    }
+  }
+}
