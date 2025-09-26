@@ -47,8 +47,17 @@ $container-vert-padding: 60px;
   gap: 40px;
 }
 
+.price-container {
+  @extend %container;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: bisque;
+}
+
 .faq-container {
   @extend %container;
   justify-content: space-between;
   gap: 40px;
 }
+

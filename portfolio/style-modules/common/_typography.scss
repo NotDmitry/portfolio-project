@@ -10,7 +10,6 @@
 
 //==== Section header ====
 .section-header {
-  margin: 0;
   @include m.font-stack(v.$font-captions, 32px, 400);
   line-height: 40px; /* 125% */
   text-transform: uppercase;
@@ -18,7 +17,6 @@
 
 //==== Subheader text ====
 .subtitle {
-  margin: 0;
   @include m.font-stack(v.$font-captions, 20px, 400);
   line-height: 28px; /* 140% */
   text-transform: uppercase;
@@ -40,7 +38,6 @@
 
 //==== Common paragraph text ====
 .common-text {
-  margin: 0;
   @include m.font-stack(v.$font-common, 16px, 400);
   line-height: 24px; /* 150% */
 }

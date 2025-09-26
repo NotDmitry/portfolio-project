@@ -1,4 +1,5 @@
 @mixin font-stack($family, $size, $weight) {
+  margin: 0;
   font: {
     family: $family;
     size: $size;
