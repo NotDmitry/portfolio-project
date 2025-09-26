@@ -196,7 +196,7 @@ html {
   gap: 12px;
 }
 
-.about-container, .header-container {
+.faq-container, .about-container, .header-container {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
@@ -212,6 +212,11 @@ html {
 .about-container {
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 40px;
+}
+
+.faq-container {
+  justify-content: space-between;
   gap: 40px;
 }
 
@@ -233,6 +238,7 @@ html {
 }
 
 .subtitle {
+  margin: 0;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -279,7 +285,7 @@ html {
   font-style: italic;
 }
 
-.about-item {
+.about-container-item {
   flex: 1 0 0;
   display: flex;
   flex-direction: column;
@@ -290,6 +296,10 @@ html {
   width: 440px;
   aspect-ratio: 1/1;
   object-fit: cover;
+}
+
+.faq-container-item {
+  flex: 1 0 0;
 }
 
 .button {
@@ -340,6 +350,22 @@ html {
 }
 .nav-list a:hover {
   color: #FF3C3C;
+}
+
+.accordion-question-open, .accordion-question-closed {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.accordion-question-closed {
+  border-bottom: 1px solid #ffffff;
+}
+
+.accordion-answer {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

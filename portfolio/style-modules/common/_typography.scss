@@ -18,6 +18,7 @@
 
 //==== Subheader text ====
 .subtitle {
+  margin: 0;
   @include m.font-stack(v.$font-captions, 20px, 400);
   line-height: 28px; /* 140% */
   text-transform: uppercase;

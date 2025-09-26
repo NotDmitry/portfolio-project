@@ -46,3 +46,9 @@ $container-vert-padding: 60px;
   flex-wrap: wrap;
   gap: 40px;
 }
+
+.faq-container {
+  @extend %container;
+  justify-content: space-between;
+  gap: 40px;
+}

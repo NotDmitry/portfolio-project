@@ -3,7 +3,9 @@
 @use "style-modules/common/typography";
 
 @use "style-modules/layout/about";
+@use "style-modules/layout/faq";
 
 @use "style-modules/components/button";
 @use "style-modules/components/text-input";
 @use "style-modules/components/navigation-list";
+@use "style-modules/components/accordion";
