@@ -1,0 +1,15 @@
+@use "../common/variables" as v;
+
+.text-input {
+  display: flex;
+  height: 60px;
+  max-width: 380px;
+  padding: 0 12px;
+  align-items: center;
+  border: 1px solid v.$color-dark-main;
+  background-color: v.$color-light-main;
+
+  &::placeholder {
+    color: v.$color-input-placeholder;
+  }
+}
