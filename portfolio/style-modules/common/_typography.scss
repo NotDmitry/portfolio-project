@@ -1,0 +1,56 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+//==== Page header ====
+.page-header {
+  @include m.font-stack(v.$font-captions, 116px, 300);
+  line-height: 132px; /* 113.793% */
+  text-transform: uppercase;
+}
+
+//==== Section header ====
+.section-header {
+  @include m.font-stack(v.$font-captions, 32px, 400);
+  line-height: 40px; /* 125% */
+  text-transform: uppercase;
+}
+
+//==== Subheader text ====
+.subtitle {
+  @include m.font-stack(v.$font-captions, 20px, 400);
+  line-height: 28px; /* 140% */
+  text-transform: uppercase;
+}
+
+//==== Count text on Hero section ====
+.count-text {
+  @include m.font-stack(v.$font-captions, 48px, 300);
+  line-height: 54px; /* 112.5% */
+  text-transform: uppercase;
+}
+
+//==== Button caption ====
+.interactive-caption {
+  @include m.font-stack(v.$font-captions, 16px, 400);
+  line-height: 24px; /* 150% */
+  text-transform: uppercase;
+}
+
+//==== Common paragraph text ====
+.common-text {
+  @include m.font-stack(v.$font-common, 16px, 400);
+  line-height: 24px; /* 150% */
+}
+
+//==== Small text ====
+.small-text {
+  @include m.font-stack(v.$font-common, 12px, 500);
+  line-height: 16px; /* 133.333% */
+}
+
+//==== Card italic text ====
+.common-italic-text {
+  @include m.font-stack(v.$font-common, 16px, 400);
+  line-height: 20px; /* 125% */
+  font-style: italic;
+}

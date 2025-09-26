@@ -176,18 +176,80 @@ summary {
   display: list-item;
 }
 
-/* Font stack */
-/* Color palette */
 .dark-section, .light-section {
   padding: 60px 20px;
 }
 
 .light-section {
   background-color: #ffffff;
+  color: #222222;
 }
 
 .dark-section {
   background-color: #222222;
+  color: #ffffff;
+}
+
+.page-header {
+  font-family: "Oswald", sans-serif;
+  font-size: 116px;
+  font-weight: 300;
+  line-height: 132px; /* 113.793% */
+  text-transform: uppercase;
+}
+
+.section-header {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px; /* 125% */
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+  text-transform: uppercase;
+}
+
+.count-text {
+  font-family: "Oswald", sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 54px; /* 112.5% */
+  text-transform: uppercase;
+}
+
+.interactive-caption {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  text-transform: uppercase;
+}
+
+.common-text {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.small-text {
+  font-family: "Mulish", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+}
+
+.common-italic-text {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  font-style: italic;
 }
 
 /*# sourceMappingURL=style.css.map */
