@@ -1,0 +1,17 @@
+@use "../common/variables" as v;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  min-width: 200px;
+  background-color: v.$color-dark-main;
+  color: v.$color-light-main;
+  transition: 0.25s;
+
+  &:hover {
+    background-color: v.$color-hover;
+    color: v.$color-dark-main;
+  }
+}
