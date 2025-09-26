@@ -1,5 +1,9 @@
 @use "variables" as v;
 
+html {
+  scroll-behavior: smooth;
+}
+
 //==== Sections ====
 $section-padding: 60px 20px;
 
