@@ -190,7 +190,13 @@ html {
   color: #ffffff;
 }
 
-.header-container {
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-container, .header-container {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
@@ -203,6 +209,12 @@ html {
   padding: 0 0 0 20px;
 }
 
+.about-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
 .page-header {
   font-family: "Oswald", sans-serif;
   font-size: 116px;
@@ -212,6 +224,7 @@ html {
 }
 
 .section-header {
+  margin: 0;
   font-family: "Oswald", sans-serif;
   font-size: 32px;
   font-weight: 400;
@@ -244,6 +257,7 @@ html {
 }
 
 .common-text {
+  margin: 0;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -263,6 +277,19 @@ html {
   font-weight: 400;
   line-height: 20px; /* 125% */
   font-style: italic;
+}
+
+.about-item {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-img {
+  width: 440px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .button {

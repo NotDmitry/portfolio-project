@@ -15,10 +15,16 @@ html {
   color: v.$color-light-main;
 }
 
-//==== Container ====
+//==== Containers ====
 $container-width: 1440px;
 $container-hor-padding: 20px;
 $container-vert-padding: 60px;
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
 %container {
   display: flex;
@@ -32,4 +38,11 @@ $container-vert-padding: 60px;
   justify-content: space-between;
   align-items: center;
   padding: 0 0 0 $container-hor-padding;
+}
+
+.about-container {
+  @extend %container;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
