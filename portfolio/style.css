@@ -283,5 +283,8 @@ html {
 .text-input::placeholder {
   color: #989898;
 }
+.text-input:hover {
+  border-color: #FF3C3C;
+}
 
 /*# sourceMappingURL=style.css.map */
