@@ -180,10 +180,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.dark-section, .light-section {
-  padding: 60px 20px;
-}
-
 .light-section {
   background-color: #ffffff;
   color: #222222;
@@ -192,6 +188,19 @@ html {
 .dark-section {
   background-color: #222222;
   color: #ffffff;
+}
+
+.header-container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 60px 20px;
+}
+
+.header-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 20px;
 }
 
 .page-header {
@@ -288,6 +297,8 @@ html {
 }
 
 .nav-list {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
   justify-content: center;
@@ -296,6 +307,9 @@ html {
 }
 .nav-list a {
   padding: 0 20px;
+  transition: 0.25s;
+  text-decoration: none;
+  color: #ffffff;
 }
 .nav-list a:hover {
   color: #FF3C3C;

@@ -5,29 +5,31 @@ html {
 }
 
 //==== Sections ====
-$section-padding: 60px 20px;
-
-%section {
-  padding: $section-padding;
-}
-
 .light-section {
-  @extend %section;
   background-color: v.$color-light-main;
   color: v.$color-dark-main;
 }
 
 .dark-section {
-  @extend %section;
   background-color: v.$color-dark-main;
   color: v.$color-light-main;
 }
 
 //==== Container ====
 $container-width: 1440px;
+$container-hor-padding: 20px;
+$container-vert-padding: 60px;
 
 %container {
   display: flex;
   margin: 0 auto;
   max-width: $container-width;
+  padding: $container-vert-padding $container-hor-padding;
+}
+
+.header-container {
+  @extend %container;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 $container-hor-padding;
 }
