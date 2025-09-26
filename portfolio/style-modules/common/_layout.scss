@@ -1,5 +1,6 @@
 @use "variables" as v;
 
+//==== SECTIONS ====
 $section-padding: 60px 20px;
 
 %section {
@@ -14,4 +15,13 @@ $section-padding: 60px 20px;
 .dark-section {
   @extend %section;
   background-color: v.$color-dark-main;
+}
+
+//==== CONTAINER ====
+$container-width: 1440px;
+
+%container {
+  display: flex;
+  margin: 0 auto;
+  max-width: $container-width;
 }
