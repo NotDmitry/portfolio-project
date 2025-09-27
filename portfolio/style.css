@@ -196,7 +196,7 @@ html {
   gap: 12px;
 }
 
-.footer-links-container, .faq-container, .price-container, .about-container, .header-container {
+.footer-contacts-container, .faq-container, .price-container, .about-container, .header-container {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
@@ -226,7 +226,7 @@ html {
   gap: 40px;
 }
 
-.footer-links-container {
+.footer-contacts-container {
   justify-content: center;
   align-items: center;
   padding: 20px;
