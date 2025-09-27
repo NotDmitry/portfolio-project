@@ -20,6 +20,7 @@ $container-width: 1440px;
 $container-hor-padding: 20px;
 $container-vert-padding: 60px;
 $hero-container-gap: 40px;
+$container-gap: 40px;
 
 .text-container {
   display: flex;
@@ -32,16 +33,22 @@ $hero-container-gap: 40px;
   margin: 0 auto;
   max-width: $container-width;
   padding: $container-vert-padding $container-hor-padding;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+%vertical-container {
+  @extend %container;
+  flex-direction: column;
 }
 
 .header-container {
   @extend %container;
   padding: 0 0 0 $container-hor-padding;
-  justify-content: space-between;
   align-items: center;
 }
 
-.hero-wrapper-container {
+.hero-inner-container {
   @extend %container;
   padding: 0;
   gap: 20px;
@@ -56,7 +63,7 @@ $hero-container-gap: 40px;
   gap: 12px;
 }
 
-.hero-container {
+.hero-inner-container {
   flex: 1 0 0;
   @extend %container;
   gap: $hero-container-gap;
@@ -65,16 +72,11 @@ $hero-container-gap: 40px;
 
 .about-container {
   @extend %container;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
 }
 
 .portfolio-container {
-  @extend %container;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 40px;
+  @extend %vertical-container;
 
   .text-container {
     max-width: 360px;
@@ -82,24 +84,37 @@ $hero-container-gap: 40px;
 }
 
 .price-container {
-  @extend %container;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 40px;
+  @extend %vertical-container;
+
+  .price-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
 }
 
 .faq-container {
   @extend %container;
-  justify-content: space-between;
-  gap: 40px;
+
+  .faq-inner-container {
+    flex: 1 0 0;
+  }
 }
 
 .footer-form-container {
-  @extend %container;
+  @extend %vertical-container;
   padding: 40px $container-hor-padding $container-hor-padding;
-  flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  .footer-form-inner-container {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
 }
 
 .footer-contacts-container {

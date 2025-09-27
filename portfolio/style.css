@@ -196,20 +196,25 @@ html {
   gap: 12px;
 }
 
-.footer-contacts-container, .footer-form-container, .faq-container, .price-container, .portfolio-container, .about-container, .hero-container, .hero-wrapper-container, .header-container {
+.footer-contacts-container, .faq-container, .about-container, .hero-inner-container, .header-container, .footer-form-container, .price-container, .portfolio-container {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
   padding: 60px 20px;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-form-container, .price-container, .portfolio-container {
+  flex-direction: column;
 }
 
 .header-container {
   padding: 0 0 0 20px;
-  justify-content: space-between;
   align-items: center;
 }
 
-.hero-wrapper-container {
+.hero-inner-container {
   padding: 0;
   gap: 20px;
 }
@@ -223,43 +228,42 @@ html {
   gap: 12px;
 }
 
-.hero-container {
+.hero-inner-container {
   flex: 1 0 0;
   gap: 40px;
   align-items: center;
 }
 
 .about-container {
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
 }
 
-.portfolio-container {
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 40px;
-}
 .portfolio-container .text-container {
   max-width: 360px;
 }
 
-.price-container {
-  flex-direction: column;
-  justify-content: space-between;
+.price-container .price-cards-container {
+  display: flex;
+  justify-content: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
-.faq-container {
-  justify-content: space-between;
-  gap: 40px;
+.faq-container .faq-inner-container {
+  flex: 1 0 0;
 }
 
 .footer-form-container {
   padding: 40px 20px 20px;
-  flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+.footer-form-container .footer-form-inner-container {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-contacts-container {
@@ -351,8 +355,7 @@ html {
   align-items: flex-start;
   gap: 160px;
 }
-
-.hero-text-container {
+.hero-text-wrapper .hero-text-container {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -367,8 +370,7 @@ html {
   display: flex;
   gap: 8px;
 }
-
-.hero-text-counter {
+.hero-text-counter-container .hero-text-counter {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -416,36 +418,16 @@ html {
   object-fit: cover;
 }
 
-.about-container-item {
+.about-inner-container {
   flex: 1 0 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-
-.about-img {
+.about-inner-container img {
   width: 440px;
   aspect-ratio: 1/1;
   object-fit: cover;
-}
-
-.price-cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.faq-container-item {
-  flex: 1 0 0;
-}
-
-.footer-form-inner-container {
-  align-self: stretch;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
 }
 
 .button {

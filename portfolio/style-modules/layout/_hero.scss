@@ -12,12 +12,12 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 160px;
-}
 
-.hero-text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  .hero-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .hero-text-counters {
@@ -28,12 +28,12 @@
 .hero-text-counter-container {
   display: flex;
   gap: 8px;
-}
 
-.hero-text-counter {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  .hero-text-counter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 .hero-scroll {
@@ -49,7 +49,6 @@
     stroke: v.$color-hover;
   }
 }
-
 
 .hero-temp-container {
   display: flex;

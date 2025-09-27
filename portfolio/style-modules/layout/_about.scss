@@ -1,12 +1,12 @@
-.about-container-item {
+.about-inner-container {
   flex: 1 0 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
 
-.about-img {
-  width: 440px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  img {
+    width: 440px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
 }
