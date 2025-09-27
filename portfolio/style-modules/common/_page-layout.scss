@@ -19,6 +19,7 @@ html {
 $container-width: 1440px;
 $container-hor-padding: 20px;
 $container-vert-padding: 60px;
+$hero-container-gap: 40px;
 
 .text-container {
   display: flex;
@@ -37,6 +38,28 @@ $container-vert-padding: 60px;
   @extend %container;
   padding: 0 0 0 $container-hor-padding;
   justify-content: space-between;
+  align-items: center;
+}
+
+.hero-wrapper-container {
+  @extend %container;
+  padding: 0;
+  gap: 20px;
+}
+
+.hero-aside {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  writing-mode: sideways-lr;
+  gap: 12px;
+}
+
+.hero-container {
+  flex: 1 0 0;
+  @extend %container;
+  gap: $hero-container-gap;
   align-items: center;
 }
 

@@ -196,7 +196,7 @@ html {
   gap: 12px;
 }
 
-.footer-contacts-container, .footer-form-container, .faq-container, .price-container, .about-container, .header-container {
+.footer-contacts-container, .footer-form-container, .faq-container, .price-container, .about-container, .hero-container, .hero-wrapper-container, .header-container {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
@@ -206,6 +206,26 @@ html {
 .header-container {
   padding: 0 0 0 20px;
   justify-content: space-between;
+  align-items: center;
+}
+
+.hero-wrapper-container {
+  padding: 0;
+  gap: 20px;
+}
+
+.hero-aside {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  writing-mode: sideways-lr;
+  gap: 12px;
+}
+
+.hero-container {
+  flex: 1 0 0;
+  gap: 40px;
   align-items: center;
 }
 
@@ -309,6 +329,84 @@ html {
   font-style: italic;
 }
 
+.hr-line {
+  flex-grow: 1;
+  border-left: 1px solid #ffffff;
+}
+
+.hero-text-wrapper {
+  flex: 1 0 0;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 160px;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-text-counters {
+  display: flex;
+  gap: 60px;
+}
+
+.hero-text-counter-container {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-text-counter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-scroll {
+  display: flex block;
+  text-decoration: none;
+  gap: 8px;
+  color: #ffffff;
+  stroke: #ffffff;
+  transition: 0.25s;
+}
+.hero-scroll:hover {
+  color: #FF3C3C;
+  stroke: #FF3C3C;
+}
+
+.hero-temp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+.hero-temp-container img {
+  width: 220px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.hero-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+.hero-image-container p {
+  text-align: right;
+  max-width: 220px;
+}
+.hero-image-container img {
+  width: 280px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
 .about-container-item {
   flex: 1 0 0;
   display: flex;
@@ -356,6 +454,7 @@ html {
 .button:hover {
   background-color: #FF3C3C;
   color: #222222;
+  cursor: pointer;
 }
 
 .text-input {
@@ -406,6 +505,7 @@ html {
 .accordion-question-open:hover, .accordion-question-closed:hover {
   color: #FF3C3C;
   fill: #FF3C3C;
+  cursor: pointer;
 }
 
 .accordion-question-closed {

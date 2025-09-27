@@ -15,5 +15,6 @@
   &:hover {
     background-color: v.$color-hover;
     color: v.$color-dark-main;
+    cursor: pointer;
   }
 }
