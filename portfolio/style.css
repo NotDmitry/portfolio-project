@@ -196,7 +196,7 @@ html {
   gap: 12px;
 }
 
-.faq-container, .price-container, .about-container, .header-container {
+.footer-links-container, .faq-container, .price-container, .about-container, .header-container {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
@@ -219,12 +219,17 @@ html {
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
-  background-color: bisque;
 }
 
 .faq-container {
   justify-content: space-between;
   gap: 40px;
+}
+
+.footer-links-container {
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .page-header {

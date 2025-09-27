@@ -52,7 +52,6 @@ $container-vert-padding: 60px;
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
-  background-color: bisque;
 }
 
 .faq-container {
@@ -61,3 +60,9 @@ $container-vert-padding: 60px;
   gap: 40px;
 }
 
+.footer-links-container {
+  @extend %container;
+  justify-content: center;
+  align-items: center;
+  padding: $container-hor-padding;
+}
