@@ -5,6 +5,13 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  transition: 0.25s;
+  fill: v.$color-light-main;
+
+  &:hover {
+    color: v.$color-hover;
+    fill: v.$color-hover;
+  }
 }
 
 .accordion-question-closed {

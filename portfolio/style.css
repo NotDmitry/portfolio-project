@@ -378,6 +378,12 @@ html {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  transition: 0.25s;
+  fill: #ffffff;
+}
+.accordion-question-open:hover, .accordion-question-closed:hover {
+  color: #FF3C3C;
+  fill: #FF3C3C;
 }
 
 .accordion-question-closed {
