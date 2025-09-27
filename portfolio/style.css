@@ -397,13 +397,39 @@ html {
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #222222;
+  transition: 0.25s;
+}
+.price-card:hover {
+  border-color: #FF3C3C;
+}
+.price-card:hover button {
+  background-color: #FF3C3C;
+  color: #222222;
 }
 
-.price-card-item {
+.price-card-inner-container {
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: stretch;
+}
+
+.price-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+}
+.price-card-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.price-card-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #222222;
 }
 
 /*# sourceMappingURL=style.css.map */
