@@ -35,9 +35,9 @@ $container-vert-padding: 60px;
 
 .header-container {
   @extend %container;
+  padding: 0 0 0 $container-hor-padding;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 0 $container-hor-padding;
 }
 
 .about-container {
@@ -60,9 +60,17 @@ $container-vert-padding: 60px;
   gap: 40px;
 }
 
+.footer-form-container {
+  @extend %container;
+  padding: 40px $container-hor-padding $container-hor-padding;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
 .footer-contacts-container {
   @extend %container;
+  padding: $container-hor-padding;
   justify-content: center;
   align-items: center;
-  padding: $container-hor-padding;
 }

@@ -196,7 +196,7 @@ html {
   gap: 12px;
 }
 
-.footer-contacts-container, .faq-container, .price-container, .about-container, .header-container {
+.footer-contacts-container, .footer-form-container, .faq-container, .price-container, .about-container, .header-container {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
@@ -204,9 +204,9 @@ html {
 }
 
 .header-container {
+  padding: 0 0 0 20px;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 0 20px;
 }
 
 .about-container {
@@ -226,10 +226,17 @@ html {
   gap: 40px;
 }
 
+.footer-form-container {
+  padding: 40px 20px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
 .footer-contacts-container {
+  padding: 20px;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .page-header {
@@ -326,6 +333,14 @@ html {
   flex: 1 0 0;
 }
 
+.footer-form-inner-container {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
 .button {
   padding: 0;
   display: flex;
@@ -344,13 +359,15 @@ html {
 }
 
 .text-input {
+  flex: 1 0 0;
   display: flex;
   height: 60px;
-  max-width: 380px;
+  max-width: 382px;
   padding: 0 12px;
   align-items: center;
   border: 1px solid #222222;
   background-color: #ffffff;
+  transition: 0.25s;
 }
 .text-input::placeholder {
   color: #989898;
