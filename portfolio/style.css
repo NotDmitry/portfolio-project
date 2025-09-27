@@ -196,7 +196,7 @@ html {
   gap: 12px;
 }
 
-.footer-contacts-container, .faq-container, .about-container, .hero-inner-container, .header-container, .footer-form-container, .price-container, .portfolio-container {
+.footer-contacts-container, .faq-container, .about-container, .hero-inner-container, .hero-container, .header-container, .footer-form-container, .price-container, .portfolio-container {
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
@@ -214,7 +214,7 @@ html {
   align-items: center;
 }
 
-.hero-inner-container {
+.hero-container {
   padding: 0;
   gap: 20px;
 }
