@@ -217,6 +217,12 @@ body {
   padding: 0 0 0 20px;
   align-items: center;
 }
+.header-container .menu-icon {
+  width: 60px;
+  height: 60px;
+  background: url("/portfolio/assets/svg/burger.svg");
+  display: none;
+}
 
 .hero-container {
   padding: 0;
@@ -276,6 +282,14 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .header-container nav {
+    display: none;
+  }
+  .header-container .menu-icon {
+    display: unset;
+  }
+}
 .page-header {
   margin: 0;
   font-family: "Oswald", sans-serif;
