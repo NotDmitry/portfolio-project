@@ -1,0 +1,30 @@
+@use "../common/variables" as v;
+
+%question-basic {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  transition: 0.25s;
+  fill: v.$color-light-main;
+
+  &:hover {
+    color: v.$color-hover;
+    fill: v.$color-hover;
+    cursor: pointer;
+  }
+}
+
+.accordion-question-closed {
+  @extend %question-basic;
+  border-bottom: 1px solid v.$color-light-main;
+}
+
+.accordion-question-open {
+  @extend %question-basic;
+}
+
+.accordion-answer {
+  padding-bottom: 20px;
+  border-bottom: 1px solid v.$color-light-main;
+}

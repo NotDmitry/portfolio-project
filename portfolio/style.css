@@ -1,0 +1,594 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.light-section {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.dark-section {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-contacts-container, .faq-container, .about-container, .hero-inner-container, .hero-container, .header-container, .footer-form-container, .price-container, .portfolio-container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 60px 20px;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-form-container, .price-container, .portfolio-container {
+  flex-direction: column;
+}
+
+.header-container {
+  padding: 0 0 0 20px;
+  align-items: center;
+}
+
+.hero-container {
+  padding: 0;
+  gap: 20px;
+}
+
+.hero-aside {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  writing-mode: sideways-lr;
+  gap: 12px;
+}
+
+.hero-inner-container {
+  flex: 1 0 0;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-container {
+  flex-wrap: wrap;
+}
+
+.portfolio-container .text-container {
+  max-width: 360px;
+}
+
+.price-container .price-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.faq-container .faq-inner-container {
+  flex: 1 0 0;
+}
+
+.footer-form-container {
+  padding: 40px 20px 20px;
+  align-items: center;
+  gap: 20px;
+}
+.footer-form-container .footer-form-inner-container {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-contacts-container {
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 116px;
+  font-weight: 300;
+  line-height: 113.793%;
+  text-transform: uppercase;
+}
+
+.section-header {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.count-text {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 112.5%;
+  text-transform: uppercase;
+}
+
+.interactive-caption {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.common-text {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.small-text {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 133.333%;
+}
+
+.common-italic-text {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+  font-style: italic;
+}
+
+.hr-line {
+  flex-grow: 1;
+  border-left: 1px solid #ffffff;
+}
+
+.hero-text-wrapper {
+  flex: 1 0 0;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 160px;
+}
+.hero-text-wrapper .hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-text-counters {
+  display: flex;
+  gap: 60px;
+}
+
+.hero-text-counter-container {
+  display: flex;
+  gap: 8px;
+}
+.hero-text-counter-container .hero-text-counter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-scroll {
+  display: flex block;
+  text-decoration: none;
+  gap: 8px;
+  color: #ffffff;
+  stroke: #ffffff;
+  transition: 0.25s;
+}
+.hero-scroll:hover {
+  color: #FF3C3C;
+  stroke: #FF3C3C;
+}
+
+.hero-temp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+.hero-temp-container img {
+  width: 220px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.hero-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+.hero-image-container p {
+  text-align: right;
+  max-width: 220px;
+}
+.hero-image-container img {
+  width: 280px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.about-inner-container {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about-inner-container img {
+  width: 440px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.button {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  min-width: 200px;
+  background-color: #222222;
+  color: #ffffff;
+  border: none;
+  transition: 0.25s;
+}
+.button:hover {
+  background-color: #FF3C3C;
+  color: #222222;
+  cursor: pointer;
+}
+
+.text-input {
+  flex: 1 0 0;
+  display: flex;
+  height: 60px;
+  max-width: 382px;
+  padding: 0 12px;
+  align-items: center;
+  border: 1px solid #222222;
+  background-color: #ffffff;
+  transition: 0.25s;
+}
+.text-input::placeholder {
+  color: #989898;
+}
+.text-input:hover {
+  border-color: #FF3C3C;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.nav-list a {
+  padding: 0 20px;
+  transition: 0.25s;
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav-list a:hover {
+  color: #FF3C3C;
+}
+
+.accordion-question-open, .accordion-question-closed {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  transition: 0.25s;
+  fill: #ffffff;
+}
+.accordion-question-open:hover, .accordion-question-closed:hover {
+  color: #FF3C3C;
+  fill: #FF3C3C;
+  cursor: pointer;
+}
+
+.accordion-question-closed {
+  border-bottom: 1px solid #ffffff;
+}
+
+.accordion-answer {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.price-card {
+  width: 320px;
+  height: 500px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #222222;
+  transition: 0.25s;
+}
+.price-card:hover {
+  border-color: #FF3C3C;
+}
+.price-card:hover button {
+  background-color: #FF3C3C;
+  color: #222222;
+}
+
+.price-card-inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.price-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+}
+.price-card-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.price-card-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #222222;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  height: 654px;
+  gap: 20px;
+  width: fit-content;
+  align-items: flex-start;
+}
+.slider-wrapper img {
+  object-fit: cover;
+}
+
+.slider-square-image {
+  width: 220px;
+  aspect-ratio: 1/1;
+  align-self: center;
+}
+
+.slider-midsize-image {
+  width: 280px;
+  aspect-ratio: 140/187;
+}
+
+.slider-large-image {
+  width: 400px;
+  aspect-ratio: 200/267;
+}
+
+.slider-image-padded {
+  margin-top: 120px;
+}
+
+/*# sourceMappingURL=style.css.map */
