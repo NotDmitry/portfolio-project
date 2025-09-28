@@ -490,7 +490,8 @@ body {
 }
 
 .accordion-question-open, .accordion-question-closed {
-  padding: 18px 0;
+  height: 64px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   gap: 20px;
