@@ -1,0 +1,36 @@
+.slider-container {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  height: 654px;
+  gap: 20px;
+  width: fit-content;
+  align-items: flex-start;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.slider-square-image {
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  align-self: center;
+}
+
+.slider-midsize-image {
+  width: 280px;
+  aspect-ratio: 140 / 187;
+}
+
+.slider-large-image {
+  width: 400px;
+  aspect-ratio: 200/267;
+}
+
+.slider-image-padded {
+  margin-top: 120px;
+}

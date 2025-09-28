@@ -180,6 +180,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .light-section {
   background-color: #ffffff;
   color: #222222;
@@ -549,6 +553,42 @@ html {
   width: 6px;
   height: 6px;
   background-color: #222222;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  height: 654px;
+  gap: 20px;
+  width: fit-content;
+  align-items: flex-start;
+}
+.slider-wrapper img {
+  object-fit: cover;
+}
+
+.slider-square-image {
+  width: 220px;
+  aspect-ratio: 1/1;
+  align-self: center;
+}
+
+.slider-midsize-image {
+  width: 280px;
+  aspect-ratio: 140/187;
+}
+
+.slider-large-image {
+  width: 400px;
+  aspect-ratio: 200/267;
+}
+
+.slider-image-padded {
+  margin-top: 120px;
 }
 
 /*# sourceMappingURL=style.css.map */
