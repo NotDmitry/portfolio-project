@@ -54,3 +54,13 @@
   line-height: 125%;
   font-style: italic;
 }
+
+//==== Media Queries 768px ====
+
+@media screen and (max-width: v.$tablet-breakpoint) {
+  .page-header {
+    font-size: 68px;
+    line-height: 117.647%;
+  }
+
+}

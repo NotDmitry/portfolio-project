@@ -81,3 +81,17 @@
     object-fit: cover;
   }
 }
+
+//==== Media Queries 768px ====
+
+@media screen and (max-width: v.$tablet-breakpoint) {
+  .hero-temp-container {
+    display: none;
+  }
+
+  .hero-image-container {
+    img {
+      width: 220px;
+    }
+  }
+}

@@ -360,6 +360,12 @@ body {
   font-style: italic;
 }
 
+@media screen and (max-width: 768px) {
+  .page-header {
+    font-size: 68px;
+    line-height: 117.647%;
+  }
+}
 .hr-line {
   flex-grow: 1;
   border-left: 1px solid #ffffff;
@@ -436,6 +442,14 @@ body {
   object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {
+  .hero-temp-container {
+    display: none;
+  }
+  .hero-image-container img {
+    width: 220px;
+  }
+}
 .about-inner-container {
   flex: 1 0 0;
   display: flex;

@@ -138,6 +138,7 @@ $container-gap: 40px;
 //==== Media Queries 768px ====
 
 @media screen and (max-width: v.$tablet-breakpoint) {
+  // Header
   .header-container {
     nav {
       display: none;
@@ -147,4 +148,8 @@ $container-gap: 40px;
       display: unset;
     }
   }
+
+  // Hero
+  $hero-container-gap: 20px;
+
 }
