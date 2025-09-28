@@ -180,7 +180,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+main {
   overflow-x: hidden;
 }
 
@@ -462,6 +462,14 @@ body {
   object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {
+  .about-inner-container img {
+    width: 728px;
+  }
+  .about-inner-container:last-of-type img {
+    display: none;
+  }
+}
 .button {
   padding: 0;
   display: flex;

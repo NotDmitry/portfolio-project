@@ -1,3 +1,5 @@
+@use "../common/variables" as v;
+
 .about-inner-container {
   flex: 1 0 0;
   display: flex;
@@ -9,4 +11,22 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
   }
+}
+
+//==== Media Queries 768px ====
+
+@media screen and (max-width: v.$tablet-breakpoint) {
+  .about-inner-container {
+
+    img {
+      width: 728px;
+    }
+
+    &:last-of-type {
+      img {
+        display: none;
+      }
+    }
+  }
+
 }
