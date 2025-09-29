@@ -294,6 +294,9 @@ main {
   .price-container .price-cards-container {
     gap: 20px;
   }
+  .faq-container {
+    flex-direction: column;
+  }
 }
 .page-header {
   margin: 0;
