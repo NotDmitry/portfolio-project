@@ -298,6 +298,14 @@ main {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 380px) {
+  .hero-aside {
+    display: none;
+  }
+  .hero-inner-container {
+    flex-direction: column;
+  }
+}
 .page-header {
   margin: 0;
   font-family: "Oswald", sans-serif;
@@ -457,6 +465,14 @@ main {
   }
   .hero-image-container img {
     width: 220px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .hero-text-wrapper {
+    padding-top: 0;
+  }
+  .hero-scroll {
+    display: none;
   }
 }
 .about-inner-container {

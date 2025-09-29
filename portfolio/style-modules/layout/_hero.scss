@@ -84,7 +84,6 @@
 }
 
 //==== Media Queries 768px ====
-
 @media screen and (max-width: v.$tablet-breakpoint) {
   .hero-temp-container {
     display: none;
@@ -94,5 +93,17 @@
     img {
       width: 220px;
     }
+  }
+}
+
+//==== Media Queries 380px ====
+@media screen and (max-width: v.$mobile-breakpoint) {
+  // Hero
+  .hero-text-wrapper {
+    padding-top: 0;
+  }
+
+  .hero-scroll {
+    display: none;
   }
 }
