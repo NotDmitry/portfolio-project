@@ -491,10 +491,12 @@ main {
   border: none;
   transition: 0.25s;
 }
-.button:hover {
-  background-color: #FF3C3C;
-  color: #222222;
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background-color: #FF3C3C;
+    color: #222222;
+    cursor: pointer;
+  }
 }
 
 .text-input {
@@ -511,8 +513,10 @@ main {
 .text-input::placeholder {
   color: #989898;
 }
-.text-input:hover {
-  border-color: #FF3C3C;
+@media (hover: hover) and (pointer: fine) {
+  .text-input:hover {
+    border-color: #FF3C3C;
+  }
 }
 
 .nav-list {
@@ -530,8 +534,10 @@ main {
   text-decoration: none;
   color: #ffffff;
 }
-.nav-list a:hover {
-  color: #FF3C3C;
+@media (hover: hover) and (pointer: fine) {
+  .nav-list a:hover {
+    color: #FF3C3C;
+  }
 }
 
 .accordion-question-open, .accordion-question-closed {
@@ -543,10 +549,12 @@ main {
   transition: 0.25s;
   fill: #ffffff;
 }
-.accordion-question-open:hover, .accordion-question-closed:hover {
-  color: #FF3C3C;
-  fill: #FF3C3C;
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .accordion-question-open:hover, .accordion-question-closed:hover {
+    color: #FF3C3C;
+    fill: #FF3C3C;
+    cursor: pointer;
+  }
 }
 
 .accordion-question-closed {
@@ -568,12 +576,14 @@ main {
   border: 1px solid #222222;
   transition: 0.25s;
 }
-.price-card:hover {
-  border-color: #FF3C3C;
-}
-.price-card:hover button {
-  background-color: #FF3C3C;
-  color: #222222;
+@media (hover: hover) and (pointer: fine) {
+  .price-card:hover {
+    border-color: #FF3C3C;
+  }
+  .price-card:hover button {
+    background-color: #FF3C3C;
+    color: #222222;
+  }
 }
 
 .price-card-inner-container {
