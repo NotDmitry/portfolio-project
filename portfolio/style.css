@@ -657,7 +657,7 @@ main {
   display: flex;
   height: 654px;
   gap: 20px;
-  width: fit-content;
+  width: max-content;
   align-items: flex-start;
 }
 .slider-wrapper img {
@@ -665,19 +665,7 @@ main {
 }
 
 .slider-square-image {
-  width: 220px;
-  aspect-ratio: 1/1;
   align-self: center;
-}
-
-.slider-midsize-image {
-  width: 280px;
-  aspect-ratio: 140/187;
-}
-
-.slider-large-image {
-  width: 400px;
-  aspect-ratio: 200/267;
 }
 
 .slider-image-padded {
