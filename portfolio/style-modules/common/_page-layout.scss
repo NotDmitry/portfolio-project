@@ -23,7 +23,6 @@ main {
 $container-width: 1440px;
 $container-hor-padding: 20px;
 $container-vert-padding: 60px;
-$hero-container-gap: 40px;
 $container-gap: 40px;
 
 .text-container {
@@ -75,9 +74,8 @@ $container-gap: 40px;
 }
 
 .hero-inner-container {
-  flex: 1 0 0;
   @extend %container;
-  gap: $hero-container-gap;
+  gap: 40px;
   align-items: center;
 }
 
@@ -150,6 +148,8 @@ $container-gap: 40px;
   }
 
   // Hero
-  $hero-container-gap: 20px;
+  .hero-inner-container {
+    gap: 20px;
+  }
 
 }

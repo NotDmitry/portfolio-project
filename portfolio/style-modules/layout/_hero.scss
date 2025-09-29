@@ -57,8 +57,8 @@
   align-self: stretch;
 
   img {
-    width: 220px;
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
     object-fit: cover;
   }
 }
@@ -76,8 +76,9 @@
   }
 
   img {
-    width: 280px;
-    aspect-ratio: 3 / 4;
+    width: 100%;
+    height: auto;
+    min-width: 220px;
     object-fit: cover;
   }
 }
