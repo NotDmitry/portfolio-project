@@ -220,7 +220,7 @@ main {
 .header-container .menu-icon {
   width: 60px;
   height: 60px;
-  background: url("/portfolio/assets/svg/burger.svg");
+  background: url("assets/svg/burger.svg");
   display: none;
 }
 
