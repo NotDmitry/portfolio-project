@@ -243,10 +243,6 @@ main {
   align-items: center;
 }
 
-.about-container {
-  flex-wrap: wrap;
-}
-
 .portfolio-container .text-container {
   max-width: 360px;
 }
@@ -290,6 +286,9 @@ main {
   }
   .hero-inner-container {
     gap: 20px;
+  }
+  .about-container {
+    flex-direction: column;
   }
   .price-container .price-cards-container {
     gap: 20px;
@@ -492,15 +491,12 @@ main {
   gap: 40px;
 }
 .about-inner-container img {
-  width: 440px;
+  width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
-  .about-inner-container img {
-    width: 728px;
-  }
   .about-inner-container:last-of-type img {
     display: none;
   }
