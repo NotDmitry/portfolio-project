@@ -1,4 +1,5 @@
 @use "../common/variables" as v;
+@use "../common/mixins" as m;
 
 .hr-line {
   flex-grow: 1;
@@ -44,7 +45,7 @@
   stroke: v.$color-light-main;
   transition: 0.25s;
 
-  &:hover {
+  @include m.non-sticking-hover {
     color: v.$color-hover;
     stroke: v.$color-hover;
   }
@@ -57,8 +58,8 @@
   align-self: stretch;
 
   img {
-    width: 220px;
-    aspect-ratio: 1 / 1;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
   }
 }
@@ -69,6 +70,7 @@
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
+  flex-shrink: 0;
 
   p {
     text-align: right;
@@ -76,8 +78,37 @@
   }
 
   img {
-    width: 280px;
-    aspect-ratio: 3 / 4;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
+  }
+}
+
+//==== Media Queries 975px ====
+@media screen and (max-width: 975px) {
+  .hero-temp-container {
+    display: none;
+  }
+
+  .hero-image-container {
+    flex-shrink: 1;
+    img {
+      width: clamp(220px, calc((100% - 220px) * (100vw - 768px) / (975px - 768px) + 220px), 100%);
+    }
+  }
+}
+
+//==== Media Queries 640px ====
+@media screen and (max-width: 640px) {
+  .hero-text-wrapper {
+    padding-top: 0;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .hero-image-container {
+    gap: 60px;
   }
 }

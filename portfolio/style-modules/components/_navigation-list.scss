@@ -1,4 +1,5 @@
 @use "../common/variables" as v;
+@use "../common/mixins" as m;
 
 .nav-list {
   margin: 0;
@@ -7,7 +8,14 @@
   list-style: none;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
 
   a {
     padding: 0 20px;
@@ -15,7 +23,7 @@
     text-decoration: none;
     color: v.$color-light-main;
 
-    &:hover {
+    @include m.non-sticking-hover {
       color: v.$color-hover;
     }
   }
