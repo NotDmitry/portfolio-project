@@ -492,6 +492,9 @@ main {
   .hero-scroll {
     display: none;
   }
+  .hero-image-container {
+    gap: 60px;
+  }
 }
 .about-inner-container {
   flex: 1 0 0;
