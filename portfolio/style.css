@@ -291,6 +291,9 @@ main {
   .hero-inner-container {
     gap: 20px;
   }
+  .price-container .price-cards-container {
+    gap: 20px;
+  }
 }
 .page-header {
   margin: 0;
