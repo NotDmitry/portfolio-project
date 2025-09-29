@@ -278,15 +278,17 @@ main {
   align-items: center;
 }
 
+@media screen and (max-width: 975px) {
+  .hero-inner-container {
+    gap: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .header-container nav {
     display: none;
   }
   .header-container .menu-icon {
     display: unset;
-  }
-  .hero-inner-container {
-    gap: 20px;
   }
   .about-container {
     flex-direction: column;
@@ -298,13 +300,15 @@ main {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 640px) {
   .hero-aside {
     display: none;
   }
   .hero-inner-container {
     flex-direction: column;
   }
+}
+@media screen and (max-width: 380px) {
   .footer-form-container .footer-form-inner-container {
     flex-direction: column;
     align-items: stretch;
@@ -321,8 +325,9 @@ main {
   font-family: "Oswald", sans-serif;
   font-size: 116px;
   font-weight: 300;
-  line-height: 113.793%;
   text-transform: uppercase;
+  font-size: clamp(68px, 48px * (100vw - 768px) / 672px + 68px, 116px);
+  line-height: clamp(80px, 52px * (100vw - 768px) / 672px + 80px, 132px);
 }
 
 .section-header {
@@ -388,8 +393,8 @@ main {
 
 @media screen and (max-width: 768px) {
   .page-header {
-    font-size: 68px;
-    line-height: 117.647%;
+    font-size: clamp(56px, 12px * (100vw - 380px) / 388px + 56px, 68px);
+    line-height: clamp(64px, 16px * (100vw - 380px) / 388px + 64px, 80px);
   }
 }
 .hr-line {
@@ -446,7 +451,7 @@ main {
   align-self: stretch;
 }
 .hero-temp-container img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
 }
@@ -457,27 +462,30 @@ main {
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
+  flex-shrink: 0;
 }
 .hero-image-container p {
   text-align: right;
   max-width: 220px;
 }
 .hero-image-container img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  min-width: 220px;
   object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 975px) {
   .hero-temp-container {
     display: none;
   }
+  .hero-image-container {
+    flex-shrink: 1;
+  }
   .hero-image-container img {
-    width: 220px;
+    width: clamp(220px, (100% - 220px) * (100vw - 768px) / 207px + 220px, 100%);
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 640px) {
   .hero-text-wrapper {
     padding-top: 0;
   }

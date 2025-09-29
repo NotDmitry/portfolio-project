@@ -57,7 +57,7 @@
   align-self: stretch;
 
   img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
   }
@@ -69,6 +69,7 @@
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
+  flex-shrink: 0;
 
   p {
     text-align: right;
@@ -76,29 +77,28 @@
   }
 
   img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    min-width: 220px;
     object-fit: cover;
   }
 }
 
-//==== Media Queries 768px ====
-@media screen and (max-width: v.$tablet-breakpoint) {
+//==== Media Queries 975px ====
+@media screen and (max-width: 975px) {
   .hero-temp-container {
     display: none;
   }
 
   .hero-image-container {
+    flex-shrink: 1;
     img {
-      width: 220px;
+      width: clamp(220px, calc((100% - 220px) * (100vw - 768px) / (975px - 768px) + 220px), 100%);
     }
   }
 }
 
-//==== Media Queries 380px ====
-@media screen and (max-width: v.$mobile-breakpoint) {
-  // Hero
+//==== Media Queries 640px ====
+@media screen and (max-width: 640px) {
   .hero-text-wrapper {
     padding-top: 0;
   }
