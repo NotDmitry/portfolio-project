@@ -1,4 +1,5 @@
 @use "../common/variables" as v;
+@use "../common/mixins" as m;
 
 .hr-line {
   flex-grow: 1;
@@ -44,7 +45,7 @@
   stroke: v.$color-light-main;
   transition: 0.25s;
 
-  &:hover {
+  @include m.non-sticking-hover {
     color: v.$color-hover;
     stroke: v.$color-hover;
   }

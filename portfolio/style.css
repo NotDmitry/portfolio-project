@@ -439,9 +439,11 @@ main {
   stroke: #ffffff;
   transition: 0.25s;
 }
-.hero-scroll:hover {
-  color: #FF3C3C;
-  stroke: #FF3C3C;
+@media (hover: hover) and (pointer: fine) {
+  .hero-scroll:hover {
+    color: #FF3C3C;
+    stroke: #FF3C3C;
+  }
 }
 
 .hero-temp-container {
