@@ -548,6 +548,7 @@ main {
   list-style: none;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .nav-list li {
   display: flex;
