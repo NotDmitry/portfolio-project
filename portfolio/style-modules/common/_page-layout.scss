@@ -114,19 +114,29 @@ $container-gap: 40px;
   }
 }
 
+.form-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+}
+
 .footer-form-container {
   @extend %vertical-container;
   padding: 40px $container-hor-padding $container-hor-padding;
   align-items: center;
   gap: 20px;
 
-  .footer-form-inner-container {
-    align-self: stretch;
-    display: flex;
-    justify-content: center;
+  .form-container {
+    flex-direction: row;
     align-items: center;
-    gap: 8px;
     flex-wrap: wrap;
+
+    .text-input {
+      flex: 1 0 0;
+    }
   }
 }
 
@@ -192,7 +202,7 @@ $container-gap: 40px;
 @media screen and (max-width: v.$mobile-breakpoint) {
   // Footer
   .footer-form-container {
-    .footer-form-inner-container {
+    .form-container {
       flex-direction: column;
       align-items: stretch;
 

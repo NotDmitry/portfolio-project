@@ -1,4 +1,43 @@
+@use "../common/variables" as v;
+@use "../common/mixins" as m;
 
+:modal {
+  padding: 0;
+  max-width: 500px;
+  width: calc(100% - 40px);
+  border: none;
 
-.modal-window {
+  &::backdrop {
+    background: rgba(34, 34, 34, 0.60);
+  }
+}
+
+.modal-window-wrapper {
+  position: relative;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  stroke: v.$color-dark-main;
+  transition: 0.25s;
+
+  @include m.non-sticking-hover {
+    stroke: v.$color-hover;
+  }
+}
+
+.modal-content-container {
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
 }
