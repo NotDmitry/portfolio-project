@@ -8,6 +8,10 @@ main {
   overflow-x: hidden;
 }
 
+.fixed-body {
+  overflow: hidden;
+}
+
 //==== Sections ====
 .light-section {
   background-color: v.$color-light-main;
