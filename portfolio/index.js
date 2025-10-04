@@ -2,7 +2,7 @@ const modal = document.querySelector('dialog');
 const closeButton = document.querySelector('.close-button');
 let buttons = document.querySelectorAll('button');
 buttons = Array.from(buttons);
-buttons.splice(-2);
+buttons = buttons.slice(1, -2);
 
 // Modal window
 buttons.forEach(button => {

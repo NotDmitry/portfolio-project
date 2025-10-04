@@ -445,12 +445,18 @@ main {
 }
 
 .hero-scroll {
-  display: flex block;
-  text-decoration: none;
-  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
   color: #ffffff;
   stroke: #ffffff;
   transition: 0.25s;
+}
+.hero-scroll a {
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
 }
 @media (hover: hover) and (pointer: fine) {
   .hero-scroll:hover {
