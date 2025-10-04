@@ -17,3 +17,5 @@ modal.addEventListener('click', (e) => {
 })
 closeButton.addEventListener('click', () => modal.close());
 modal.addEventListener('close', () => document.body.classList.toggle('fixed-body'));
+
+// Accordion

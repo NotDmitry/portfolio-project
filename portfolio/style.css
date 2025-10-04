@@ -594,30 +594,48 @@ main {
   }
 }
 
-.accordion-question-open, .accordion-question-closed {
-  height: 64px;
-  padding: 20px 0;
+.accordion-question-wrapper {
+  max-height: 64px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0 17px;
+  border-bottom: 1px solid #ffffff;
+}
+.accordion-question-wrapper .collapse-icon {
+  display: none;
+}
+.accordion-question-wrapper[open] {
+  max-height: 100%;
+  gap: 18px;
+  padding-bottom: 19px;
+}
+.accordion-question-wrapper[open] .collapse-icon {
+  display: unset;
+}
+.accordion-question-wrapper[open] .open-icon {
+  display: none;
+}
+
+.accordion-question {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   transition: 0.25s;
   fill: #ffffff;
 }
+.accordion-question::-webkit-details-marker {
+  display: none;
+}
+.accordion-question::marker {
+  display: none;
+}
 @media (hover: hover) and (pointer: fine) {
-  .accordion-question-open:hover, .accordion-question-closed:hover {
+  .accordion-question:hover {
     color: #FF3C3C;
     fill: #FF3C3C;
     cursor: pointer;
   }
-}
-
-.accordion-question-closed {
-  border-bottom: 1px solid #ffffff;
-}
-
-.accordion-answer {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ffffff;
 }
 
 .price-card {
