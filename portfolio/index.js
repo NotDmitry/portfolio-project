@@ -1,3 +1,9 @@
+// Burger menu
+const menuIcon = document.querySelector('.burger-icon');
+menuIcon.addEventListener('click', (event) => {
+  menuIcon.classList.toggle('active');
+})
+
 // Modal window
 const modal = document.querySelector('dialog');
 const closeButton = document.querySelector('.close-button');

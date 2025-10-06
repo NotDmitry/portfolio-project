@@ -53,13 +53,6 @@ $container-gap: 40px;
   @extend %container;
   padding: 0 0 0 $container-hor-padding;
   align-items: center;
-
-  .menu-icon {
-    width: 60px;
-    height: 60px;
-    background: url("assets/svg/burger.svg");
-    display: none;
-  }
 }
 
 .hero-container {
@@ -161,10 +154,6 @@ $container-gap: 40px;
   .header-container {
     nav {
       display: none;
-    }
-
-    .menu-icon {
-      display: unset;
     }
   }
 

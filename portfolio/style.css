@@ -221,12 +221,6 @@ main {
   padding: 0 0 0 20px;
   align-items: center;
 }
-.header-container .menu-icon {
-  width: 60px;
-  height: 60px;
-  background: url("assets/svg/burger.svg");
-  display: none;
-}
 
 .hero-container {
   padding: 0;
@@ -299,9 +293,6 @@ main {
 @media screen and (max-width: 768px) {
   .header-container nav {
     display: none;
-  }
-  .header-container .menu-icon {
-    display: unset;
   }
   .about-container {
     flex-direction: column;
@@ -752,6 +743,45 @@ main {
   align-items: center;
   text-align: center;
   gap: 12px;
+}
+
+.burger-icon {
+  display: none;
+  width: 60px;
+  height: 60px;
+  padding: 25px 20px;
+}
+.burger-icon .line {
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.25s ease-in-out;
+}
+.burger-icon .line:first-child {
+  width: 12px;
+}
+.burger-icon .line:last-child {
+  width: 20px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .burger-icon:hover .line {
+    background-color: #FF3C3C;
+  }
+}
+.burger-icon.active .line:first-child {
+  width: 20px;
+  transform: translateY(4px) rotate(45deg);
+}
+.burger-icon.active .line:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
