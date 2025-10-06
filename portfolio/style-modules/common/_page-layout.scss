@@ -4,12 +4,12 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
+html, body {
   overflow-x: hidden;
-}
 
-.fixed-body {
-  overflow: hidden;
+  &.fixed-body {
+    overflow-y: hidden;
+  }
 }
 
 //==== Sections ====

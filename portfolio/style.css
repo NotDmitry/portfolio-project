@@ -180,12 +180,11 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
+html, body {
   overflow-x: hidden;
 }
-
-.fixed-body {
-  overflow: hidden;
+html.fixed-body, body.fixed-body {
+  overflow-y: hidden;
 }
 
 .light-section {
@@ -750,6 +749,7 @@ main {
   width: 60px;
   height: 60px;
   padding: 25px 20px;
+  cursor: pointer;
 }
 .burger-icon .line {
   height: 2px;

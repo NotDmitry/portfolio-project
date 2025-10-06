@@ -11,12 +11,16 @@ const buttons = Array.from(document.querySelectorAll('button')).slice(1, -2);
 
 buttons.forEach(button => {
   button.addEventListener('click', (e) => {
+    document.documentElement.classList.toggle('fixed-body');
     document.body.classList.toggle('fixed-body');
     modal.showModal();
   })
 })
 
-modal.addEventListener('close', () => document.body.classList.toggle('fixed-body'));
+modal.addEventListener('close', () => {
+  document.documentElement.classList.toggle('fixed-body');
+  document.body.classList.toggle('fixed-body');
+});
 modal.addEventListener('click', (e) => {
   if (e.target.contains(modal)) modal.close();
 })
