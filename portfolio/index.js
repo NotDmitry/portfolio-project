@@ -35,7 +35,64 @@ mediaQuery.addEventListener('change', () => {
 });
 
 menuIcon.addEventListener('click', toggleMenu);
-menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
+menuLinks.forEach(link => link.addEventListener('click', (e) => {
+  e.preventDefault();
+  toggleMenu();
+  setTimeout(() => {
+    window.location.href = link.href;
+  }, 100);
+}));
+
+// Slider
+const hoverZones = Array.from(document.querySelectorAll('.slider-hover-zone'));
+const slider = document.querySelector('.slider-wrapper');
+
+if (window.matchMedia('not ((hover: hover) and (pointer: fine))').matches) {
+  window.addEventListener('load', () => {
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.scrollLeft = (sliderContainer.scrollWidth - sliderContainer.clientWidth) / 2;
+  });
+}
+
+let delta = 0;
+let speed = 10;
+let timer = null;
+
+function calculateBoundaries() {
+  const sliderContainerWidth = slider.offsetParent.clientWidth;
+  const sliderWidth = slider.clientWidth;
+  return (sliderWidth - sliderContainerWidth) / 2;
+}
+
+function slide(direction) {
+  let bound = calculateBoundaries();
+
+  if (delta >= bound && direction === 1) {
+    clearTimeout(timer);
+    return;
+  }
+
+  if (delta <= -bound && direction === -1) {
+    clearTimeout(timer);
+    return;
+  }
+
+  delta += speed * direction;
+  delta = Math.max(Math.min(delta, bound), -bound);
+  slider.style.transform = `translateX(${delta}px)`;
+  timer = setTimeout(() => slide(direction), 30);
+}
+
+hoverZones[0].addEventListener('mouseover', () => {
+  slide(1);
+})
+
+hoverZones[1].addEventListener('mouseover', () => {
+  slide(-1);
+})
+
+hoverZones[0].addEventListener('mouseout', () => clearTimeout(timer));
+hoverZones[1].addEventListener('mouseout', () => clearTimeout(timer));
 
 // Modal window
 const modal = document.querySelector('dialog');

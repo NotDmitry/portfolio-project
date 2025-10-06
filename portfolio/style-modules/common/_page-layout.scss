@@ -80,6 +80,10 @@ $container-gap: 40px;
   @extend %container;
 }
 
+#portfolio {
+  position: relative;
+}
+
 .portfolio-container {
   @extend %vertical-container;
 

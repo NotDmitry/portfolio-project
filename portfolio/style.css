@@ -240,6 +240,10 @@ html.fixed-body, body.fixed-body {
   align-items: center;
 }
 
+#portfolio {
+  position: relative;
+}
+
 .portfolio-container .text-container {
   max-width: 360px;
 }
@@ -680,8 +684,10 @@ html.fixed-body, body.fixed-body {
 }
 
 .slider-container {
+  position: relative;
   display: flex;
   justify-content: center;
+  height: 654px;
 }
 
 .slider-wrapper {
@@ -690,9 +696,29 @@ html.fixed-body, body.fixed-body {
   gap: 20px;
   width: max-content;
   align-items: flex-start;
+  transition: transform 0.25s linear;
 }
 .slider-wrapper img {
   object-fit: cover;
+}
+
+.slider-hover-zone {
+  position: absolute;
+  width: 30%;
+  height: 654px;
+  bottom: 60px;
+}
+.slider-hover-zone.left-hover {
+  left: 0;
+}
+.slider-hover-zone.left-hover:hover {
+  background: rgba(247, 154, 15, 0.1);
+}
+.slider-hover-zone.right-hover {
+  right: 0;
+}
+.slider-hover-zone.right-hover:hover {
+  background: rgba(15, 108, 247, 0.1);
 }
 
 .slider-square-image {
@@ -703,6 +729,23 @@ html.fixed-body, body.fixed-body {
   margin-top: 120px;
 }
 
+@media not ((hover: hover) and (pointer: fine)) {
+  .slider-hover-zone {
+    display: none;
+  }
+  .slider-container {
+    display: block;
+    width: 100vw;
+    margin-left: -20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .slider-wrapper {
+    padding: 0 20px;
+  }
+}
 :modal {
   padding: 0;
   max-width: 500px;
