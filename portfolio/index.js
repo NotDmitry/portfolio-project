@@ -1,8 +1,41 @@
+function fixBody() {
+  document.documentElement.classList.toggle('fixed-body');
+  document.body.classList.toggle('fixed-body');
+}
+
+function releaseBody() {
+  document.documentElement.classList.toggle('fixed-body');
+  document.body.classList.toggle('fixed-body');
+}
+
+function toggleBodyScroll() {
+  if (document.body.classList.contains('fixed-body')) {
+    releaseBody();
+  } else {
+    fixBody();
+  }
+}
+
 // Burger menu
 const menuIcon = document.querySelector('.burger-icon');
-menuIcon.addEventListener('click', (event) => {
+const burgerMenu = document.querySelector('.burger-wrapper');
+const menuLinks = document.querySelectorAll('.burger-menu a');
+const mediaQuery = window.matchMedia("screen and (max-width: 768px)");
+
+function toggleMenu() {
   menuIcon.classList.toggle('active');
-})
+  burgerMenu.classList.toggle('opened');
+  toggleBodyScroll();
+}
+
+mediaQuery.addEventListener('change', () => {
+  if (!mediaQuery.matches && burgerMenu.classList.contains('opened')) {
+    toggleMenu();
+  }
+});
+
+menuIcon.addEventListener('click', toggleMenu);
+menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
 
 // Modal window
 const modal = document.querySelector('dialog');
@@ -11,15 +44,13 @@ const buttons = Array.from(document.querySelectorAll('button')).slice(1, -2);
 
 buttons.forEach(button => {
   button.addEventListener('click', (e) => {
-    document.documentElement.classList.toggle('fixed-body');
-    document.body.classList.toggle('fixed-body');
+    fixBody();
     modal.showModal();
   })
 })
 
 modal.addEventListener('close', () => {
-  document.documentElement.classList.toggle('fixed-body');
-  document.body.classList.toggle('fixed-body');
+  releaseBody();
 });
 modal.addEventListener('click', (e) => {
   if (e.target.contains(modal)) modal.close();
