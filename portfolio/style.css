@@ -180,8 +180,11 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
+html, body {
   overflow-x: hidden;
+}
+html.fixed-body, body.fixed-body {
+  overflow-y: hidden;
 }
 
 .light-section {
@@ -217,12 +220,6 @@ main {
   padding: 0 0 0 20px;
   align-items: center;
 }
-.header-container .menu-icon {
-  width: 60px;
-  height: 60px;
-  background: url("assets/svg/burger.svg");
-  display: none;
-}
 
 .hero-container {
   padding: 0;
@@ -243,6 +240,10 @@ main {
   align-items: center;
 }
 
+#portfolio {
+  position: relative;
+}
+
 .portfolio-container .text-container {
   max-width: 360px;
 }
@@ -258,18 +259,27 @@ main {
   flex: 1 0 0;
 }
 
+.form-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+}
+
 .footer-form-container {
   padding: 40px 20px 20px;
   align-items: center;
   gap: 20px;
 }
-.footer-form-container .footer-form-inner-container {
-  align-self: stretch;
-  display: flex;
-  justify-content: center;
+.footer-form-container .form-container {
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
   flex-wrap: wrap;
+}
+.footer-form-container .form-container .text-input {
+  flex: 1 0 0;
 }
 
 .footer-contacts-container {
@@ -286,9 +296,6 @@ main {
 @media screen and (max-width: 768px) {
   .header-container nav {
     display: none;
-  }
-  .header-container .menu-icon {
-    display: unset;
   }
   .about-container {
     flex-direction: column;
@@ -309,11 +316,11 @@ main {
   }
 }
 @media screen and (max-width: 380px) {
-  .footer-form-container .footer-form-inner-container {
+  .footer-form-container .form-container {
     flex-direction: column;
     align-items: stretch;
   }
-  .footer-form-container .footer-form-inner-container .text-input {
+  .footer-form-container .form-container .text-input {
     flex: unset;
   }
   .footer-contacts-container .nav-list {
@@ -432,12 +439,18 @@ main {
 }
 
 .hero-scroll {
-  display: flex block;
-  text-decoration: none;
-  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
   color: #ffffff;
   stroke: #ffffff;
   transition: 0.25s;
+}
+.hero-scroll a {
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
 }
 @media (hover: hover) and (pointer: fine) {
   .hero-scroll:hover {
@@ -536,7 +549,6 @@ main {
 }
 
 .text-input {
-  flex: 1 0 0;
   display: flex;
   height: 60px;
   max-width: 382px;
@@ -582,30 +594,48 @@ main {
   }
 }
 
-.accordion-question-open, .accordion-question-closed {
-  height: 64px;
-  padding: 20px 0;
+.accordion-question-wrapper {
+  max-height: 64px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0 17px;
+  border-bottom: 1px solid #ffffff;
+}
+.accordion-question-wrapper .collapse-icon {
+  display: none;
+}
+.accordion-question-wrapper[open] {
+  max-height: 100%;
+  gap: 18px;
+  padding-bottom: 19px;
+}
+.accordion-question-wrapper[open] .collapse-icon {
+  display: unset;
+}
+.accordion-question-wrapper[open] .open-icon {
+  display: none;
+}
+
+.accordion-question {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   transition: 0.25s;
   fill: #ffffff;
 }
+.accordion-question::-webkit-details-marker {
+  display: none;
+}
+.accordion-question::marker {
+  display: none;
+}
 @media (hover: hover) and (pointer: fine) {
-  .accordion-question-open:hover, .accordion-question-closed:hover {
+  .accordion-question:hover {
     color: #FF3C3C;
     fill: #FF3C3C;
     cursor: pointer;
   }
-}
-
-.accordion-question-closed {
-  border-bottom: 1px solid #ffffff;
-}
-
-.accordion-answer {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ffffff;
 }
 
 .price-card {
@@ -654,8 +684,10 @@ main {
 }
 
 .slider-container {
+  position: relative;
   display: flex;
   justify-content: center;
+  height: 654px;
 }
 
 .slider-wrapper {
@@ -664,9 +696,29 @@ main {
   gap: 20px;
   width: max-content;
   align-items: flex-start;
+  transition: transform 0.25s linear;
 }
 .slider-wrapper img {
   object-fit: cover;
+}
+
+.slider-hover-zone {
+  position: absolute;
+  width: 30%;
+  height: 654px;
+  bottom: 60px;
+}
+.slider-hover-zone.left-hover {
+  left: 0;
+}
+.slider-hover-zone.left-hover:hover {
+  background: rgba(247, 154, 15, 0.1);
+}
+.slider-hover-zone.right-hover {
+  right: 0;
+}
+.slider-hover-zone.right-hover:hover {
+  background: rgba(15, 108, 247, 0.1);
 }
 
 .slider-square-image {
@@ -675,6 +727,122 @@ main {
 
 .slider-image-padded {
   margin-top: 120px;
+}
+
+@media not ((hover: hover) and (pointer: fine)) {
+  .slider-hover-zone {
+    display: none;
+  }
+  .slider-container {
+    display: block;
+    width: 100vw;
+    margin-left: -20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .slider-wrapper {
+    padding: 0 20px;
+  }
+}
+:modal {
+  padding: 0;
+  max-width: 500px;
+  width: calc(100% - 40px);
+  border: none;
+}
+:modal::backdrop {
+  background: rgba(34, 34, 34, 0.6);
+}
+
+.modal-window-wrapper {
+  position: relative;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  stroke: #222222;
+  transition: 0.25s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .close-button:hover {
+    stroke: #FF3C3C;
+  }
+}
+
+.modal-content-container {
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.burger-icon {
+  display: none;
+  width: 60px;
+  height: 60px;
+  padding: 25px 20px;
+  cursor: pointer;
+}
+.burger-icon .line {
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.25s ease-in-out;
+}
+.burger-icon .line:first-child {
+  width: 12px;
+}
+.burger-icon .line:last-child {
+  width: 20px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .burger-icon:hover .line {
+    background-color: #FF3C3C;
+  }
+}
+.burger-icon.active .line:first-child {
+  width: 20px;
+  transform: translateY(4px) rotate(45deg);
+}
+.burger-icon.active .line:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+.burger-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease-in-out;
+  transform: translateX(100%);
+}
+.burger-wrapper.opened {
+  transform: translateX(0%);
+}
+
+.burger-menu.nav-list {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

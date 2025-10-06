@@ -38,12 +38,19 @@
 }
 
 .hero-scroll {
-  display: flex block;
-  text-decoration: none;
-  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
   color: v.$color-light-main;
   stroke: v.$color-light-main;
   transition: 0.25s;
+
+  a {
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+  }
 
   @include m.non-sticking-hover {
     color: v.$color-hover;
