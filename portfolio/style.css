@@ -454,8 +454,8 @@ html.fixed-body, body.fixed-body {
 }
 @media (hover: hover) and (pointer: fine) {
   .hero-scroll:hover {
-    color: #FF3C3C;
-    stroke: #FF3C3C;
+    color: #ff3c3c;
+    stroke: #ff3c3c;
   }
 }
 
@@ -542,7 +542,7 @@ html.fixed-body, body.fixed-body {
 }
 @media (hover: hover) and (pointer: fine) {
   .button:hover {
-    background-color: #FF3C3C;
+    background-color: #ff3c3c;
     color: #222222;
     cursor: pointer;
   }
@@ -563,7 +563,7 @@ html.fixed-body, body.fixed-body {
 }
 @media (hover: hover) and (pointer: fine) {
   .text-input:hover {
-    border-color: #FF3C3C;
+    border-color: #ff3c3c;
   }
 }
 
@@ -590,7 +590,7 @@ html.fixed-body, body.fixed-body {
 }
 @media (hover: hover) and (pointer: fine) {
   .nav-list a:hover {
-    color: #FF3C3C;
+    color: #ff3c3c;
   }
 }
 
@@ -632,8 +632,8 @@ html.fixed-body, body.fixed-body {
 }
 @media (hover: hover) and (pointer: fine) {
   .accordion-question:hover {
-    color: #FF3C3C;
-    fill: #FF3C3C;
+    color: #ff3c3c;
+    fill: #ff3c3c;
     cursor: pointer;
   }
 }
@@ -650,10 +650,10 @@ html.fixed-body, body.fixed-body {
 }
 @media (hover: hover) and (pointer: fine) {
   .price-card:hover {
-    border-color: #FF3C3C;
+    border-color: #ff3c3c;
   }
   .price-card:hover button {
-    background-color: #FF3C3C;
+    background-color: #ff3c3c;
     color: #222222;
   }
 }
@@ -772,7 +772,7 @@ html.fixed-body, body.fixed-body {
 }
 @media (hover: hover) and (pointer: fine) {
   .close-button:hover {
-    stroke: #FF3C3C;
+    stroke: #ff3c3c;
   }
 }
 
@@ -807,7 +807,7 @@ html.fixed-body, body.fixed-body {
 }
 @media (hover: hover) and (pointer: fine) {
   .burger-icon:hover .line {
-    background-color: #FF3C3C;
+    background-color: #ff3c3c;
   }
 }
 .burger-icon.active .line:first-child {

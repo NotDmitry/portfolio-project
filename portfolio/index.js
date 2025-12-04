@@ -1,19 +1,6 @@
-function fixBody() {
-  document.documentElement.classList.toggle('fixed-body');
-  document.body.classList.toggle('fixed-body');
-}
-
-function releaseBody() {
-  document.documentElement.classList.toggle('fixed-body');
-  document.body.classList.toggle('fixed-body');
-}
-
 function toggleBodyScroll() {
-  if (document.body.classList.contains('fixed-body')) {
-    releaseBody();
-  } else {
-    fixBody();
-  }
+  document.documentElement.classList.toggle('fixed-body');
+  document.body.classList.toggle('fixed-body');
 }
 
 // Burger menu
@@ -100,15 +87,13 @@ const closeButton = document.querySelector('.close-button');
 const buttons = Array.from(document.querySelectorAll('button')).slice(1, -2);
 
 buttons.forEach(button => {
-  button.addEventListener('click', (e) => {
-    fixBody();
+  button.addEventListener('click', () => {
+    toggleBodyScroll();
     modal.showModal();
   })
 })
 
-modal.addEventListener('close', () => {
-  releaseBody();
-});
+modal.addEventListener('close', toggleBodyScroll);
 modal.addEventListener('click', (e) => {
   if (e.target.contains(modal)) modal.close();
 })
