@@ -14,7 +14,7 @@ The layout was made according to the corresponding [Design in Figma](https://www
 - Using JavaScript for implementing interactive features
 - SASS / SCSS
 
-## Interactive features:
+## Interactive features
 
 - Opening and closing **burger menu** on the page when the width is 768px and less.
 - **Slider** in `Portfolio` section.
