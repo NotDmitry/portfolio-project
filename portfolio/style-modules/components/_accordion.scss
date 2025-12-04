@@ -1,0 +1,49 @@
+@use "../common/variables" as v;
+@use "../common/mixins" as m;
+
+.accordion-question-wrapper {
+  max-height: 64px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0 17px;
+  border-bottom: 1px solid v.$color-light-main;
+
+  .collapse-icon {
+    display: none;
+  }
+
+  &[open] {
+    max-height: 100%;
+    gap: 18px;
+    padding-bottom: 19px;
+
+    .collapse-icon {
+      display: unset;
+    }
+
+    .open-icon {
+      display: none;
+    }
+  }
+}
+
+.accordion-question {
+  &::-webkit-details-marker {
+    display: none
+  }
+  &::marker {
+    display: none;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  transition: 0.25s;
+  fill: v.$color-light-main;
+
+  @include m.non-sticking-hover {
+    color: v.$color-hover;
+    fill: v.$color-hover;
+    cursor: pointer;
+  };
+}

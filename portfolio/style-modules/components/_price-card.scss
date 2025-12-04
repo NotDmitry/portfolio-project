@@ -1,0 +1,49 @@
+@use "../common/variables" as v;
+@use "../common/mixins" as m;
+
+.price-card {
+  width: 320px;
+  height: 500px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid v.$color-dark-main;
+  transition: 0.25s;
+
+  @include m.non-sticking-hover {
+    border-color: v.$color-hover;
+
+    button {
+      background-color: v.$color-hover;
+      color: v.$color-dark-main;
+    }
+  }
+}
+
+.price-card-inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.price-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: v.$color-dark-main;
+  }
+}

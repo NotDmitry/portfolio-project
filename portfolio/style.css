@@ -1,0 +1,848 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+html.fixed-body, body.fixed-body {
+  overflow-y: hidden;
+}
+
+.light-section {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.dark-section {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-contacts-container, .faq-container, .about-container, .hero-inner-container, .hero-container, .header-container, .footer-form-container, .price-container, .portfolio-container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 60px 20px;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-form-container, .price-container, .portfolio-container {
+  flex-direction: column;
+}
+
+.header-container {
+  padding: 0 0 0 20px;
+  align-items: center;
+}
+
+.hero-container {
+  padding: 0;
+  gap: 20px;
+}
+
+.hero-aside {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  writing-mode: sideways-lr;
+  gap: 12px;
+}
+
+.hero-inner-container {
+  gap: 40px;
+  align-items: center;
+}
+
+#portfolio {
+  position: relative;
+}
+
+.portfolio-container .text-container {
+  max-width: 360px;
+}
+
+.price-container .price-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.faq-container .faq-inner-container {
+  flex: 1 0 0;
+}
+
+.form-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.footer-form-container {
+  padding: 40px 20px 20px;
+  align-items: center;
+  gap: 20px;
+}
+.footer-form-container .form-container {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-form-container .form-container .text-input {
+  flex: 1 0 0;
+}
+
+.footer-contacts-container {
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 975px) {
+  .hero-inner-container {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-container nav {
+    display: none;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+  .price-container .price-cards-container {
+    gap: 20px;
+  }
+  .faq-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 640px) {
+  .hero-aside {
+    display: none;
+  }
+  .hero-inner-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer-form-container .form-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer-form-container .form-container .text-input {
+    flex: unset;
+  }
+  .footer-contacts-container .nav-list {
+    flex-direction: column;
+  }
+}
+.page-header {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 116px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: clamp(68px, 48px * (100vw - 768px) / 672px + 68px, 116px);
+  line-height: clamp(80px, 52px * (100vw - 768px) / 672px + 80px, 132px);
+}
+
+.section-header {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.count-text {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 112.5%;
+  text-transform: uppercase;
+}
+
+.interactive-caption {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.common-text {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.small-text {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 133.333%;
+}
+
+.common-italic-text {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .page-header {
+    font-size: clamp(56px, 12px * (100vw - 380px) / 388px + 56px, 68px);
+    line-height: clamp(64px, 16px * (100vw - 380px) / 388px + 64px, 80px);
+  }
+}
+.hr-line {
+  flex-grow: 1;
+  border-left: 1px solid #ffffff;
+}
+
+.hero-text-wrapper {
+  flex: 1 0 0;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 160px;
+}
+.hero-text-wrapper .hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-text-counters {
+  display: flex;
+  gap: 60px;
+}
+
+.hero-text-counter-container {
+  display: flex;
+  gap: 8px;
+}
+.hero-text-counter-container .hero-text-counter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-scroll {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #ffffff;
+  stroke: #ffffff;
+  transition: 0.25s;
+}
+.hero-scroll a {
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-scroll:hover {
+    color: #ff3c3c;
+    stroke: #ff3c3c;
+  }
+}
+
+.hero-temp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+.hero-temp-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+.hero-image-container p {
+  text-align: right;
+  max-width: 220px;
+}
+.hero-image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 975px) {
+  .hero-temp-container {
+    display: none;
+  }
+  .hero-image-container {
+    flex-shrink: 1;
+  }
+  .hero-image-container img {
+    width: clamp(220px, (100% - 220px) * (100vw - 768px) / 207px + 220px, 100%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .hero-text-wrapper {
+    padding-top: 0;
+  }
+  .hero-scroll {
+    display: none;
+  }
+  .hero-image-container {
+    gap: 60px;
+  }
+}
+.about-inner-container {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about-inner-container img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .about-inner-container:last-of-type img {
+    display: none;
+  }
+}
+.button {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  min-width: 200px;
+  background-color: #222222;
+  color: #ffffff;
+  border: none;
+  transition: 0.25s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background-color: #ff3c3c;
+    color: #222222;
+    cursor: pointer;
+  }
+}
+
+.text-input {
+  display: flex;
+  height: 60px;
+  max-width: 382px;
+  padding: 0 12px;
+  align-items: center;
+  border: 1px solid #222222;
+  background-color: #ffffff;
+  transition: 0.25s;
+}
+.text-input::placeholder {
+  color: #989898;
+}
+@media (hover: hover) and (pointer: fine) {
+  .text-input:hover {
+    border-color: #ff3c3c;
+  }
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.nav-list a {
+  padding: 0 20px;
+  transition: 0.25s;
+  text-decoration: none;
+  color: #ffffff;
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav-list a:hover {
+    color: #ff3c3c;
+  }
+}
+
+.accordion-question-wrapper {
+  max-height: 64px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0 17px;
+  border-bottom: 1px solid #ffffff;
+}
+.accordion-question-wrapper .collapse-icon {
+  display: none;
+}
+.accordion-question-wrapper[open] {
+  max-height: 100%;
+  gap: 18px;
+  padding-bottom: 19px;
+}
+.accordion-question-wrapper[open] .collapse-icon {
+  display: unset;
+}
+.accordion-question-wrapper[open] .open-icon {
+  display: none;
+}
+
+.accordion-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  transition: 0.25s;
+  fill: #ffffff;
+}
+.accordion-question::-webkit-details-marker {
+  display: none;
+}
+.accordion-question::marker {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .accordion-question:hover {
+    color: #ff3c3c;
+    fill: #ff3c3c;
+    cursor: pointer;
+  }
+}
+
+.price-card {
+  width: 320px;
+  height: 500px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #222222;
+  transition: 0.25s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .price-card:hover {
+    border-color: #ff3c3c;
+  }
+  .price-card:hover button {
+    background-color: #ff3c3c;
+    color: #222222;
+  }
+}
+
+.price-card-inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.price-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+}
+.price-card-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.price-card-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #222222;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 654px;
+}
+
+.slider-wrapper {
+  display: flex;
+  height: 654px;
+  gap: 20px;
+  width: max-content;
+  align-items: flex-start;
+  transition: transform 0.25s linear;
+}
+.slider-wrapper img {
+  object-fit: cover;
+}
+
+.slider-hover-zone {
+  position: absolute;
+  width: 30%;
+  height: 654px;
+  bottom: 60px;
+}
+.slider-hover-zone.left-hover {
+  left: 0;
+}
+.slider-hover-zone.left-hover:hover {
+  background: rgba(247, 154, 15, 0.1);
+}
+.slider-hover-zone.right-hover {
+  right: 0;
+}
+.slider-hover-zone.right-hover:hover {
+  background: rgba(15, 108, 247, 0.1);
+}
+
+.slider-square-image {
+  align-self: center;
+}
+
+.slider-image-padded {
+  margin-top: 120px;
+}
+
+@media not ((hover: hover) and (pointer: fine)) {
+  .slider-hover-zone {
+    display: none;
+  }
+  .slider-container {
+    display: block;
+    width: 100vw;
+    margin-left: -20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .slider-wrapper {
+    padding: 0 20px;
+  }
+}
+:modal {
+  padding: 0;
+  max-width: 500px;
+  width: calc(100% - 40px);
+  border: none;
+}
+:modal::backdrop {
+  background: rgba(34, 34, 34, 0.6);
+}
+
+.modal-window-wrapper {
+  position: relative;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  stroke: #222222;
+  transition: 0.25s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .close-button:hover {
+    stroke: #ff3c3c;
+  }
+}
+
+.modal-content-container {
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.burger-icon {
+  display: none;
+  width: 60px;
+  height: 60px;
+  padding: 25px 20px;
+  cursor: pointer;
+}
+.burger-icon .line {
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.25s ease-in-out;
+}
+.burger-icon .line:first-child {
+  width: 12px;
+}
+.burger-icon .line:last-child {
+  width: 20px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .burger-icon:hover .line {
+    background-color: #ff3c3c;
+  }
+}
+.burger-icon.active .line:first-child {
+  width: 20px;
+  transform: translateY(4px) rotate(45deg);
+}
+.burger-icon.active .line:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+.burger-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease-in-out;
+  transform: translateX(100%);
+}
+.burger-wrapper.opened {
+  transform: translateX(0%);
+}
+
+.burger-menu.nav-list {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

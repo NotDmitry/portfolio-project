@@ -1,0 +1,213 @@
+@use "variables" as v;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+
+  &.fixed-body {
+    overflow-y: hidden;
+  }
+}
+
+//==== Sections ====
+.light-section {
+  background-color: v.$color-light-main;
+  color: v.$color-dark-main;
+}
+
+.dark-section {
+  background-color: v.$color-dark-main;
+  color: v.$color-light-main;
+}
+
+//==== Containers ====
+$container-width: 1440px;
+$container-hor-padding: 20px;
+$container-vert-padding: 60px;
+$container-gap: 40px;
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+%container {
+  display: flex;
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: $container-vert-padding $container-hor-padding;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+%vertical-container {
+  @extend %container;
+  flex-direction: column;
+}
+
+.header-container {
+  @extend %container;
+  padding: 0 0 0 $container-hor-padding;
+  align-items: center;
+}
+
+.hero-container {
+  @extend %container;
+  padding: 0;
+  gap: 20px;
+}
+
+.hero-aside {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  writing-mode: sideways-lr;
+  gap: 12px;
+}
+
+.hero-inner-container {
+  @extend %container;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-container {
+  @extend %container;
+}
+
+#portfolio {
+  position: relative;
+}
+
+.portfolio-container {
+  @extend %vertical-container;
+
+  .text-container {
+    max-width: 360px;
+  }
+}
+
+.price-container {
+  @extend %vertical-container;
+
+  .price-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+}
+
+.faq-container {
+  @extend %container;
+
+  .faq-inner-container {
+    flex: 1 0 0;
+  }
+}
+
+.form-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.footer-form-container {
+  @extend %vertical-container;
+  padding: 40px $container-hor-padding $container-hor-padding;
+  align-items: center;
+  gap: 20px;
+
+  .form-container {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .text-input {
+      flex: 1 0 0;
+    }
+  }
+}
+
+.footer-contacts-container {
+  @extend %container;
+  padding: $container-hor-padding;
+  justify-content: center;
+  align-items: center;
+}
+
+//==== Media Queries 975px ====
+@media screen and (max-width: 975px) {
+  // Hero
+  .hero-inner-container {
+    gap: 20px;
+  }
+}
+
+//==== Media Queries 768px ====
+@media screen and (max-width: v.$tablet-breakpoint) {
+  // Header
+  .header-container {
+    nav {
+      display: none;
+    }
+  }
+
+  // About
+  .about-container {
+    flex-direction: column;
+  }
+
+  // Price
+  .price-container {
+    .price-cards-container {
+      gap: 20px;
+    }
+  }
+
+  // FAQ
+  .faq-container {
+    flex-direction: column;
+  }
+}
+
+//==== Media Queries 640px ====
+@media screen and (max-width: 640px) {
+  // Hero
+  .hero-aside {
+    display: none;
+  }
+
+  .hero-inner-container {
+    flex-direction: column;
+  }
+}
+
+//==== Media Queries 380px ====
+@media screen and (max-width: v.$mobile-breakpoint) {
+  // Footer
+  .footer-form-container {
+    .form-container {
+      flex-direction: column;
+      align-items: stretch;
+
+      .text-input {
+        flex: unset;
+      }
+    }
+  }
+
+  .footer-contacts-container {
+    .nav-list {
+      flex-direction: column;
+    }
+  }
+}

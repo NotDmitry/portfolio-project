@@ -1,0 +1,65 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+//==== Page header ====
+.page-header {
+  @include m.font-stack(v.$font-captions, 116px, 300);
+  text-transform: uppercase;
+  font-size: clamp(68px, calc((116px - 68px) * (100vw - 768px) / (1440px - 768px) + 68px), 116px);
+  line-height: clamp(80px, calc((132px - 80px) * (100vw - 768px) / (1440px - 768px) + 80px), 132px);
+}
+
+//==== Section header ====
+.section-header {
+  @include m.font-stack(v.$font-captions, 32px, 400);
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+//==== Subheader text ====
+.subtitle {
+  @include m.font-stack(v.$font-captions, 20px, 400);
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+//==== Count text on Hero section ====
+.count-text {
+  @include m.font-stack(v.$font-captions, 48px, 300);
+  line-height: 112.5%;
+  text-transform: uppercase;
+}
+
+//==== Button caption ====
+.interactive-caption {
+  @include m.font-stack(v.$font-captions, 16px, 400);
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+//==== Common paragraph text ====
+.common-text {
+  @include m.font-stack(v.$font-common, 16px, 400);
+  line-height: 150%;
+}
+
+//==== Small text ====
+.small-text {
+  @include m.font-stack(v.$font-common, 12px, 500);
+  line-height: 133.333%;
+}
+
+//==== Card italic text ====
+.common-italic-text {
+  @include m.font-stack(v.$font-common, 16px, 400);
+  line-height: 125%;
+  font-style: italic;
+}
+
+//==== Media Queries 768px ====
+@media screen and (max-width: v.$tablet-breakpoint) {
+  .page-header {
+    font-size: clamp(56px, calc((68px - 56px) * (100vw - 380px) / (768px - 380px) + 56px), 68px);
+    line-height: clamp(64px, calc((80px - 64px) * (100vw - 380px) / (768px - 380px) + 64px), 80px);
+  }
+}

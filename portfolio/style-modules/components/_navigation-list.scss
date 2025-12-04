@@ -1,0 +1,30 @@
+@use "../common/variables" as v;
+@use "../common/mixins" as m;
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+  a {
+    padding: 0 20px;
+    transition: 0.25s;
+    text-decoration: none;
+    color: v.$color-light-main;
+
+    @include m.non-sticking-hover {
+      color: v.$color-hover;
+    }
+  }
+}

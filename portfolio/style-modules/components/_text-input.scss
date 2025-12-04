@@ -1,0 +1,21 @@
+@use "../common/variables" as v;
+@use "../common/mixins" as m;
+
+.text-input {
+  display: flex;
+  height: 60px;
+  max-width: 382px;
+  padding: 0 12px;
+  align-items: center;
+  border: 1px solid v.$color-dark-main;
+  background-color: v.$color-light-main;
+  transition: 0.25s;
+
+  &::placeholder {
+    color: v.$color-input-placeholder;
+  }
+
+  @include m.non-sticking-hover {
+    border-color: v.$color-hover;
+  }
+}
